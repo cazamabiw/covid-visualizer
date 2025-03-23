@@ -67,8 +67,8 @@ https://github.com/cazamabiw/CovidApi
 
 ---
 
-## 📸 Screenshots
-![1](https://github.com/user-attachments/assets/b4048818-60d2-432a-ae60-98e3976f1831)
+## Screenshots
+![image](https://github.com/user-attachments/assets/762f5fa7-8239-4eac-9273-7768c9b16e21)
 
 ![2](https://github.com/user-attachments/assets/3f2af35a-5215-46ea-bf61-135a3a75fdaa)
 
