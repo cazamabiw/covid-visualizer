@@ -18,7 +18,7 @@ interface LineChartProps {
   color?: string;
 }
 
-const LineChart = ({ label, data, color = 'rgba(75,192,192,1)' }: LineChartProps) => {
+const LineChart = ({ label, data, color = 'rgba(8, 125, 56, 0.8)' }: LineChartProps) => {
   const chartData = {
     labels: data.map((d) => d.label),
     datasets: [

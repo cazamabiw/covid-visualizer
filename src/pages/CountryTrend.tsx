@@ -1,5 +1,4 @@
-// src/pages/CountryTrend.tsx
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchCountryTrend } from '../api/covidApi';
 import { CovidCase } from '../types/covid';
 import LineChart from '../components/LineChart';
@@ -10,11 +9,13 @@ const CountryTrend = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSearch = async () => {
+  const handleSearch = async (selectedCountry?: string) => {
+    const query = selectedCountry || country;
+
     setLoading(true);
     setError('');
     try {
-      const res = await fetchCountryTrend(country);
+      const res = await fetchCountryTrend(query);
       setTrendData(res.data);
     } catch (err) {
       console.error(err);
@@ -23,6 +24,11 @@ const CountryTrend = () => {
       setLoading(false);
     }
   };
+
+  // 🔁 Auto-load for Canada on page load
+  useEffect(() => {
+    handleSearch('Canada');
+  }, []);
 
   return (
     <div>
@@ -36,7 +42,7 @@ const CountryTrend = () => {
           onChange={(e) => setCountry(e.target.value)}
           placeholder="Enter country name (e.g., Canada)"
         />
-        <button className="btn btn-primary" onClick={handleSearch}>
+        <button className="btn btn-primary" onClick={() => handleSearch()}>
           Search
         </button>
       </div>
