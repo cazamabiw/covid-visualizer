@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+# COVID-19 Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application to visualize global COVID-19 case trends and vaccination data using **React** (frontend) and **.NET Web API** (backend).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Global weekly COVID-19 case trends (line chart)
+- Top 10 countries by total COVID-19 cases
+- Country-specific case trends with search and auto-load (default: Canada)
+- Top 10 countries by vaccination doses (multi-color bar chart)
+- Responsive UI with Bootstrap
+- Fully integrated REST API using Axios
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+**Frontend:**
+- React + TypeScript
+- Chart.js (`react-chartjs-2`)
+- Axios
+- Bootstrap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Backend:**
+- ASP.NET Core Web API
+- Entity Framework Core
+- PostgreSQL
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone the Repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/yourusername/covid-dashboard.git
+cd covid-dashboard
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 2. Frontend Setup (React)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd frontend
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Create a `.env` file:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```env
+REACT_APP_API_BASE_URL={your backend url}
+```
 
-## Learn More
+Start the React dev server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Backend Setup (.NET Web API)
+
+https://github.com/cazamabiw/CovidApi
+
+---
+
+## 📸 Screenshots
+![1](https://github.com/user-attachments/assets/b4048818-60d2-432a-ae60-98e3976f1831)
+
+![2](https://github.com/user-attachments/assets/3f2af35a-5215-46ea-bf61-135a3a75fdaa)
+
+![3](https://github.com/user-attachments/assets/65b0cec9-2347-4a63-a919-ad4bfaeeba4b)
+
